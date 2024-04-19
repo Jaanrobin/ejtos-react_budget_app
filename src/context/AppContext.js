@@ -60,7 +60,6 @@ export const AppReducer = (state, action) => {
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
-
             return {
                 ...state,
             };
@@ -105,6 +104,7 @@ export const AppProvider = (props) => {
         }, 0);
         remaining = state.budget - totalExpenses;
     }
+
 
     return (
         <AppContext.Provider
